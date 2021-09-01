@@ -9,8 +9,8 @@ function SearchBar(props) {
   const { searchYelp } = props;
   const sortByOptions = {
     "Best Match": "best_match",
-    "Highest Rated": "highest_rated",
-    "Most Reviewed": "most_reviewed",
+    "Highest Rated": "rating",
+    "Most Reviewed": "review_count",
   };
   const getSortByClass = (type) => {
     if (sortBy === type) {
