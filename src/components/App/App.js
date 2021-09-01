@@ -1,8 +1,6 @@
-import logo from "../../logo.svg";
 import "./App.css";
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
-import Business from "../Business/Business";
 import Yelp from "../../util/Yelp";
 import { useState } from "react";
 

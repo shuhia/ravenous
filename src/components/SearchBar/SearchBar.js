@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
-import useBusinessSearch from "./useBusinessSearch";
 
 function SearchBar(props) {
   const [term, setTerm] = useState();
