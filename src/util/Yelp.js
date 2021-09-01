@@ -56,23 +56,23 @@ const Yelp = {
       );
       const jsonResponse = await response.json();
       const businesses = jsonResponse.businesses;
-
-      businesses.map((business) => {
+      console.log(businesses);
+      return businesses.map((business) => {
         const {
           id,
           image_url: imageSrc,
           name,
-          location: { adress1: adress, city, state, zip_code: zipCode },
+          location: { address1: address, city, state, zip_code: zipCode },
           categories: { title: category },
           review_count: reviewCount,
           rating,
-        } = jsonResponse.business;
+        } = business;
 
         return {
           id,
           imageSrc,
           name,
-          adress,
+          address: address,
           city,
           state,
           zipCode,
@@ -83,10 +83,11 @@ const Yelp = {
       });
     } catch (error) {
       console.log(error);
+      return [];
     }
   },
 
-  search(term, location, sortBy) {
+  async search(term, location, sortBy) {
     const url = "https://api.yelp.com/v3";
     const path = "/businesses/search?";
     const query = `term=${term}&location=${location}&sort_by=${sortBy}`;

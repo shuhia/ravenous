@@ -7,7 +7,7 @@ describe("Yelp functions", () => {
       "id",
       "imageSrc",
       "name",
-      "adress",
+      "address",
       "city",
       "state",
       "zipCode",

@@ -3,21 +3,6 @@ import "./Business.css";
 
 function Business(props) {
   const {
-    business = {
-      imageSrc:
-        "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
-      name: "MarginOtto Pizzeria",
-      address: "1010 Paddington Way",
-      city: "Flavortown",
-      state: "NY",
-      zipCode: "10101",
-      category: "Italian",
-      rating: 4.5,
-      reviewCount: 90,
-    },
-  } = props.business;
-
-  const {
     imageSrc,
     name,
     address,
@@ -27,13 +12,13 @@ function Business(props) {
     category,
     rating,
     reviewCount,
-  } = business;
+  } = props.business;
   return (
     <div className="Business">
       <div className="image-container">
         <img src={imageSrc} alt={name} />
       </div>
-      <h2>MarginOtto Pizzeria</h2>
+      <h2>{name}</h2>
       <div className="Business-information">
         <div className="Business-address">
           <p>{address}</p>

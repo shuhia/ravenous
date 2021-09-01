@@ -3,18 +3,19 @@ import "./App.css";
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
 import Business from "../Business/Business";
+import Yelp from "../../util/Yelp";
+import { useState } from "react";
 
 function App() {
-  const businesses = [1, 2, 3, 4, 5, 6];
+  const [businesses, setBusinesses] = useState([]);
 
   const searchYelp = (
     term = "Pizza",
     location = "Brooklyn",
     sortBy = "best_match"
   ) => {
-    console.log(
-      "Searching Yelp with " + term + ", " + location + ", " + sortBy
-    );
+    const result = Yelp.search(term, location, sortBy);
+    result.then((businesses) => setBusinesses(businesses));
   };
 
   return (
