@@ -10,7 +10,7 @@ function SearchBar() {
   };
   const renderSortByOptions = () => {
     return Object.entries(sortByOptions).map((option) => (
-      <li key={option[0]}>{option[1]}</li>
+      <li key={option[1]}>{option[0]}</li>
     ));
   };
   const sortByOptionsValue = renderSortByOptions();
