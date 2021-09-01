@@ -8,7 +8,27 @@ function SearchBar() {
     "Highest Rated": "highest_rated",
     "Most Reviewed": "most_reviewed",
   };
-  return <div></div>;
+  const renderSortByOptions = () => {
+    return Object.entries(sortByOptions).map((option) => (
+      <li key={option[0]}>{option[1]}</li>
+    ));
+  };
+  const sortByOptionsValue = renderSortByOptions();
+
+  return (
+    <div className="SearchBar">
+      <div className="SearchBar-sort-options">
+        <ul>{sortByOptionsValue}</ul>
+      </div>
+      <div className="SearchBar-fields">
+        <input placeholder="Search Businesses" />
+        <input placeholder="Where?" />
+      </div>
+      <div className="SearchBar-submit">
+        <a>Let's Go</a>
+      </div>
+    </div>
+  );
 }
 
 export default SearchBar;
