@@ -61,6 +61,7 @@ function SearchBar(props) {
         <input placeholder="Where?" onChange={handleLocationChange} />
       </div>
       <div className="SearchBar-submit">
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
         <a className="button" onClick={handleSearch}>
           Let's Go
         </a>
