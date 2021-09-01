@@ -7,8 +7,14 @@ import Business from "../Business/Business";
 function App() {
   const businesses = [1, 2, 3, 4, 5, 6];
 
-  const searchYelp = (term, location, sortBy) => {
-    console.log("Searching Yelp with Pizza, Brooklyn, best_match");
+  const searchYelp = (
+    term = "Pizza",
+    location = "Brooklyn",
+    sortBy = "best_match"
+  ) => {
+    console.log(
+      "Searching Yelp with " + term + ", " + location + ", " + sortBy
+    );
   };
 
   return (

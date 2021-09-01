@@ -3,10 +3,10 @@ import "./SearchBar.css";
 import useBusinessSearch from "./useBusinessSearch";
 
 function SearchBar(props) {
-  const [term, setTerm] = useState("");
-  const [location, setLocation] = useState("");
+  const [term, setTerm] = useState();
+  const [location, setLocation] = useState();
   const [sortBy, setSortBy] = useState("best_match");
-  const { yelpSearch } = props;
+  const { searchYelp } = props;
   const sortByOptions = {
     "Best Match": "best_match",
     "Highest Rated": "highest_rated",
@@ -36,7 +36,7 @@ function SearchBar(props) {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    yelpSearch(term, location, sortBy);
+    searchYelp(term, location, sortBy);
   };
 
   const renderSortByOptions = () => {
