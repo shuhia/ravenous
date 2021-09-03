@@ -4,7 +4,7 @@
 - This web application is intended to aid the user in finding any business anywhere in the world. 
 - This project is included in [Codecademy Create a react app course](https://www.codecademy.com/learn/paths/build-web-apps-with-react).
 - Reasons to complete this project is to use react to solve a problem. Get some practical experience working with react. 
-- [preview](https://shuhia-ravenous.netlify.app/)
+- [Preview](https://shuhia-ravenous.netlify.app/) (this is a link to site deployed on netlify)
 
 ## Techologies Used
 - ReactJS - version 17.x.x
