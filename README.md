@@ -2,7 +2,7 @@
 ## General info 
 - This project is a clone of Yelp. Visit Yelp [here](https://www.yelp.se/stockholm). 
 - This web application is intended to aid the user in finding restaurants on the internet.
-- This project is included in Codecademy Create a react app course.
+- This project is included in [Codecademy Create a react app course](https://www.codecademy.com/learn/paths/build-web-apps-with-react).
 - Reasons to complete this project is to use react to solve a problem. Get some practical experience working with react. 
 
 ## Techologies Used
