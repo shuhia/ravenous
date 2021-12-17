@@ -3,10 +3,7 @@ const apiKey = process.env.REACT_APP_API_KEY;
 const Yelp = {
   async fetchBusiness(endPoint, options) {
     try {
-      const response = await fetch(
-        "https://cors-anywhere.herokuapp.com/" + endPoint,
-        options
-      );
+      const response = await fetch(endPoint, options);
       const jsonResponse = await response.json();
       const businesses = jsonResponse.businesses;
       console.log(businesses);
